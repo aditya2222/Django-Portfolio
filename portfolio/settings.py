@@ -26,7 +26,7 @@ SECRET_KEY = '4j^-s1-gy!1i6kd9ejc)-v^3)w9abc$3@b!01a9kb6ky6!7h8^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','https://portfolio-web-app.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','https://portfolio-web-app.herokuapp.com','0.0.0.0']
 
 
 # Application definition
@@ -50,7 +50,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
@@ -121,7 +120,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
