@@ -25,7 +25,7 @@ SECRET_KEY = '4j^-s1-gy!1i6kd9ejc)-v^3)w9abc$3@b!01a9kb6ky6!7h8^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]','https://portfolio-web-app.herokuapp.com']
 
 
 # Application definition
@@ -75,12 +75,19 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default='postgres://ysogcchnjxrtrb:f3245b7dc75857536684993480b4f0a79e15394347c80388d00e3cd969d0a7ce@ec2-23-23-180-121.compute-1.amazonaws.com:5432/d43sk37lf7k5aa'
-    )
-}
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default='postgres://ysogcchnjxrtrb:f3245b7dc75857536684993480b4f0a79e15394347c80388d00e3cd969d0a7ce@ec2-23-23-180-121.compute-1.amazonaws.com:5432/d43sk37lf7k5aa'
+#     )
+# }
 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    }
+}
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
