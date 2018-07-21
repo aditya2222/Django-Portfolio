@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title>Thank You</title>
+	<link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+</head>
+<body>
+	<div class="container alert alert-success">
+		<h1>Thank You For Contacting Us! We will reach out to you very soon!</h1>
+		<a href="{% url 'homepage' %}" class="btn btn-primary">Back To Home</a>
+	</div>
+
+</body>
+</html>
