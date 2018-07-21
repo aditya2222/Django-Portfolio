@@ -26,7 +26,7 @@ SECRET_KEY = '4j^-s1-gy!1i6kd9ejc)-v^3)w9abc$3@b!01a9kb6ky6!7h8^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','https://portfolio-web-app.herokuapp.com','0.0.0.0']
+ALLOWED_HOSTS = ['127.0.0.1','https://portfolio-web-app.herokuapp.com']
 
 
 # Application definition
@@ -130,3 +130,6 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+import django_heroku
+
+django_heroku.settings(locals(),staticfiles=False)
