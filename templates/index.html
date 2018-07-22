@@ -56,6 +56,7 @@
     <!-- Header -->
     <header class="masthead d-flex">
       <div class="container text-center my-auto">
+        <h2 style="font-style: italic;">Hi, I am</h2>
         <h1 class="mb-1">Aditya Singh</h1>
         <h3 class="mb-5">
           <h1>I 
@@ -132,7 +133,7 @@
     <!-- Callout -->
     <section class="callout">
       <div class="container text-center">
-        <h2 class="mx-auto mb-5">Programming,Robust Communication and Premium Quality work is my way of working
+        <h2 class="mx-auto mb-5">Programming,Robust Communication and Premium Quality work is my way of working.
           <em>My Motto: "Quality In Everything We Do!"</em>
       </div>
     </section>
@@ -264,10 +265,10 @@
     <script src="{% static "js/typer.js" %}"></script>
 
     <script>
-    function myFunction() {
+      $(document).ready(function(){
         setTimeout(function(){ document.getElementById('stopTyper').click(); }, 12000);
-    }
-    myFunction();
+      });
+
     </script>
 
   </body>
