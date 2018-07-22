@@ -58,7 +58,10 @@
       <div class="container text-center my-auto">
         <h1 class="mb-1">Aditya Singh</h1>
         <h3 class="mb-5">
-          <em>Full Stack Developer</em>
+          <h1>I 
+            <span class="typer" id="main" data-words="am a full stack developer,love to code,solve problems!" data-colors="white" data-delay="100" data-deleteDelay="1000"></span>
+            <span class="cursor typer-stop" id="stopTyper" data-owner="main"></span>
+          </h1>
         </h3>
         <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
       </div>
@@ -70,7 +73,7 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h2>I am a full stack web developer who like to code and solve burning problems!</h2>
+            <h2>I look to forward to learn new stuff and solve burning problems!</h2>
             
             <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
           </div>
@@ -256,6 +259,16 @@
 
     <!-- Custom scripts for this template -->
     <script src="{% static "js/stylish-portfolio.min.js" %}"></script>
+
+    <!-- Typer JS -->
+    <script src="{% static "js/typer.js" %}"></script>
+
+    <script>
+    function myFunction() {
+        setTimeout(function(){ document.getElementById('stopTyper').click(); }, 12000);
+    }
+    myFunction();
+    </script>
 
   </body>
 
